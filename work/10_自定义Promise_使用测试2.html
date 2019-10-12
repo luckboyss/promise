@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>自定义Promise_使用测试2</title>
+  <script src="./lib/Promise.js"></script>
+</head>
+
+<body>
+  <script>
+    const p1 = Promise.resolveDelay(4, 200);
+    const p2 = Promise.resolve(5);
+    const p3 = Promise.reject(6);
+    
+    p1.then(
+      value => {console.log('1成功', value);},
+      reason => {console.log(reason);}
+    );
+
+    p2.then(
+      value => {console.log('2成功', value);},
+      reason => {console.log(reason);}
+    );
+
+    p3.then(
+      value => {console.log(value);},
+      reason => {console.log('3失败', reason);}
+    );
+
+    Promise.all([p1,p2,3]).then(
+      values => {console.log(values,'结果成功了');},
+      reason => {console.log(reason,'结果失败了');}
+    );
+
+    Promise.race([p1,p3]).then(
+      values => {console.log(values,'结果成功了');},
+      reason => {console.log(reason,'结果失败了');}
+    );
+  </script>
+</body>
+
+</html>
