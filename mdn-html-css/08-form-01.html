@@ -1,0 +1,126 @@
+    <!DOCTYPE html>
+    <html lang="en-US">
+
+    <head>
+      <meta charset="utf-8">
+      <title>My test page</title>
+      <link rel="stylesheet" href="./08-form-01.css">
+    </head>
+
+    <body>
+      <form action="">
+        <h1>Payment form</h1>
+        <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+
+        <section>
+          <h2>Contact information</h2>
+
+          <fieldset>
+            <legend>Title</legend>
+            <ul>
+              <li>
+                <label for="title_1">
+                  <input type="radio" name="title" id="title_1">
+                  Mister
+                </label>
+              </li>
+              <li>
+                <label for="title_2">
+                  <input type="radio" name="title" id="title_2">
+                  Miss
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <p>
+            <label for="nmae">
+              <span>Name:</span>
+              <strong><abbr title="required">*</abbr></strong>
+            </label>
+            <input type="text" name="username" id="name">
+          </p>
+
+          <p>
+            <label for="mail">
+              <span>E-mail:</span>
+              <strong><abbr title="required">*</abbr></strong>
+            </label>
+            <input type="email" name="usermail" id="mail">
+          </p>
+
+          <p>
+            <label for="pwd">
+              <span>Password:</span>
+              <strong><abbr title="required">*</abbr></strong>
+            </label>
+            <input type="password" name="password" id="pwd">
+          </p>
+
+        </section>
+
+        <section>
+          <h2>Payment information</h2>
+
+          <p>
+            <label for="card">
+              <span>Card type:</span>
+            </label>
+            <select name="usercard" id="card">
+              <option value="visa">Visa</option>
+              <option value="mc">Mastercard</option>
+              <option value="amex">American Express</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="number">
+              <span>Card number:</span>
+              <strong><abbr title="required">*</abbr></strong>
+            </label>
+            <input type="number" name="cardnumber" id="number">
+          </p>
+
+          <p>
+            <label for="date">
+              <span>Expiration date:</span>
+              <strong><abbr title="required">*</abbr></strong>
+              <em>formatted as mm/yy</em>
+            </label>
+            <input type="date" name="expiration" id="date">
+          </p>
+        </section>
+        
+        <p><button type="submit">Validate the payment</button></p>
+      </form>
+      <br>
+      <br>
+
+      <form action="">
+        <select multiple id="multi" name="multi">
+          <option>Banana</option>
+          <option>Cherry</option>
+          <option>Lemon</option>
+        </select>
+        <br><br>
+        <label for="myFruit">What's your favorite fruit?</label>
+        <input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+        <datalist id="mySuggestion">
+          <option>Apple</option>
+          <option>Banana</option>
+          <option>Blackberry</option>
+          <option>Blueberry</option>
+          <option>Lemon</option>
+          <option>Lychee</option>
+          <option>Peach</option>
+          <option>Pear</option>
+        </datalist>
+        <br><br>
+        <progress max="100" value="75">75/100</progress>
+        <br><br>
+        <meter min="0" max="100" value="75" low="33" high="66" optimum="70">75</meter>
+        
+      </form>
+    </body>
+
+    </html>
