@@ -31,13 +31,13 @@
     );
 
     Promise.all([p1,p2,3]).then(
-      values => {console.log(values,'结果成功了');},
-      reason => {console.log(reason,'结果失败了');}
+      values => {console.log(values,'all成功了');},
+      reason => {console.log(reason,'all失败了');}
     );
 
     Promise.race([p1,p3]).then(
-      values => {console.log(values,'结果成功了');},
-      reason => {console.log(reason,'结果失败了');}
+      value => {console.log(value,'race成功了');},
+      reason => {console.log(reason,'race失败了');}
     );
   </script>
 </body>
